@@ -1,0 +1,22 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+}
+
+// Transition, make the animation delay longer
+@mixin transition-ease {
+    transition: all 1s ease-in-out;
+}
+
+// Function for text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
